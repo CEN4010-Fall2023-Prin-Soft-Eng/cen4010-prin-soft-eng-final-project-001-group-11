@@ -1,0 +1,11 @@
+APIs that were used in this project:
+
+JavaScript Date Object
+
+NASA APOD (Astronomy Picture of the Day) API
+
+Tomorrow.io Weather API
+
+NewsAPI
+
+Quotable API
