@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Integrated Dashboard</h1>
+    <div id="time-display"></div>
+
+    <div id="apod-container">
+        <h2>Astronomy Picture of the Day</h2>
+        <img id="apod-image" src="" alt="NASA APOD">
+        <p id="apod-caption"></p>
+        <p id="photographer"></p>
+    </div>
+
+    <div id="weather-container">
+        <h2>Weather Information</h2>
+        <label for="cityInput">Enter City:</label>
+        <input type="text" id="cityInput">
+        <button onclick="getWeather()">Get Weather</button>
+    
+        <div id="weatherData"></div>
+    </div>
+
+    <div class="article-container" id="articleContainer"></div>
+
+    <div id="quote-container">
+        <div id="quote"></div>
+        <div id="author"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
