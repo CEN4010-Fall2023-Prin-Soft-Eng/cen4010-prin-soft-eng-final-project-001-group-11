@@ -21,29 +21,42 @@ function getWeather() {
     var city = document.getElementById('cityInput').value;
     var apiKey = 'Ym8Ahge4k7MmAgsUYaylDgIDuhSYtV4W';
 
+    console.log('City:', city);
+    console.log('API Key:', apiKey);
+
     fetch(`https://api.tomorrow.io/v4/weather/realtime?location=${city}&apikey=${apiKey}`)
         .then(response => response.json())
-        .then(data => displayWeather(data))
+        .then(data => {
+            console.log('Weather Data:', data);
+            displayWeather(data);
+        })
         .catch(error => console.error('Error:', error));
 }
 
 function displayWeather(data) {
+    console.log('Received Weather Data:', data);
+
     var weatherDataDiv = document.getElementById('weatherData');
     weatherDataDiv.innerHTML = '';
 
-    var values = data.data.values;
-    var location = data.location;
+    if (data && data.data && data.data.values) {
+        var values = data.data.values;
+        var location = data.location;
 
-    var html = `
-        <p><strong>Location:</strong> ${location.name}</p>
-        <p><strong>Temperature:</strong> ${values.temperature}°C</p>
-        <p><strong>Humidity:</strong> ${values.humidity}%</p>
-        <p><strong>Wind Speed:</strong> ${values.windSpeed} m/s</p>
-        <p><strong>Cloud Cover:</strong> ${values.cloudCover}%</p>
-    `;
+        var html = `
+            <p><strong>Location:</strong> ${location.name}</p>
+            <p><strong>Temperature:</strong> ${values.temperature}°C</p>
+            <p><strong>Humidity:</strong> ${values.humidity}%</p>
+            <p><strong>Wind Speed:</strong> ${values.windSpeed} m/s</p>
+            <p><strong>Cloud Cover:</strong> ${values.cloudCover}%</p>
+        `;
 
-    weatherDataDiv.innerHTML = html;
+        weatherDataDiv.innerHTML = html;
+    } else {
+        console.error('Invalid data format for weather:', data);
+    }
 }
+
 
 function fetchTopHeadlines() {
     const apiKey = '10becb8d7bef4b2fbf1ac9a411a82de5';
@@ -101,15 +114,11 @@ function fetchRandomQuote() {
     }
 }
 
-
 fetchTime();
 fetchNASAImage();
 getWeather();
 fetchTopHeadlines();
 fetchRandomQuote();
-
-
-
 
 setInterval(fetchTime, 1000);
 setInterval(() => {
