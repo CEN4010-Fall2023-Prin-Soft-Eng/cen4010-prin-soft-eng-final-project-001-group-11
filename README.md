@@ -27,6 +27,6 @@ Experience the wonders of space with a daily image sourced from NASA. Each day b
 HTML, CSS, JavaScript
 
 ## Credits
-News API for real-time news updates
-Weather API for accurate weather information
-NASA API for daily inspirational images
+News API for real-time news updates  
+Weather API for accurate weather information  
+NASA API for daily inspirational images  
