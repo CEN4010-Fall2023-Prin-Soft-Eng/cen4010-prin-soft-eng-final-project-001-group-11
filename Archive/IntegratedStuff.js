@@ -1,7 +1,7 @@
 function fetchTime() {
     const currentTimeElement = document.getElementById("time-display");
     const currentTime = new Date().toLocaleTimeString();
-    currentTimeElement.textContent = `${currentTime}`;
+    currentTimeElement.textContent = `Current Time: ${currentTime}`;
 }
 
 function fetchNASAImage() {
@@ -52,7 +52,7 @@ function fetchTopHeadlines() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            const articles = data.articles.slice(0, 4);
+            const articles = data.articles.slice(0, 3);
             const articleContainer = document.getElementById('articleContainer');
             articleContainer.innerHTML = '';
 
@@ -68,11 +68,6 @@ function fetchTopHeadlines() {
                 imgElement.src = article.urlToImage;
                 imgElement.alt = article.title;
                 imgElement.onclick = () => window.open(article.url, '_blank');
-                
-                // Set max-width and max-height for the images
-                imgElement.style.maxWidth = '100%';
-                imgElement.style.maxHeight = '100%';
-
                 linkElement.appendChild(imgElement);
 
                 const titleElement = document.createElement('h3');
@@ -82,13 +77,9 @@ function fetchTopHeadlines() {
                 articleElement.appendChild(linkElement);
                 articleContainer.appendChild(articleElement);
             });
-
-            // Add a CSS class to the container for flexbox styling
-            articleContainer.classList.add('flex-container');
         })
         .catch(error => console.error('Error fetching top headlines:', error));
 }
-
 
 function fetchRandomQuote() {
     fetch('https://api.quotable.io/random')
