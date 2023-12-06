@@ -22,3 +22,13 @@ Start your day on a positive note with a daily inspirational quote. The dashboar
 
 ### 6. Daily Image from NASA
 Experience the wonders of space with a daily image sourced from NASA. Each day brings a new and captivating image, turning your dashboard into a window to the cosmos.
+
+## Technologies Used
+HTML
+CSS
+JavaScript
+
+## Credits
+News API for real-time news updates
+Weather API for accurate weather information
+NASA API for daily inspirational images
