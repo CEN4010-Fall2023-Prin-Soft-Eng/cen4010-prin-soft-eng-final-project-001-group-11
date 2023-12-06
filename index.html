@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top of the Morning</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Top of the Morning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="time.html">Time</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nasa.html">NASA Picture of the Day</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="weather.html">Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="articles.html">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quote.html">Quote</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="todo.html">To-Do List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="mt-4 mb-4">Top of the Morning</h1>
+
+
+        <div id="todo" class="dashboard-section">
+            <h2>To-Do List</h2>
+            <div>
+                <input type="text" id="newTask" placeholder="Add a new task">
+                <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+            </div>
+            <div id="taskList"></div>
+        </div>
+
+        <div id="time" class="dashboard-section">
+            <h2>Time</h2>
+            <div id="time-display"></div>
+        </div>
+
+        <div id="nasa" class="dashboard-section">
+            <h2>NASA Picture of the Day</h2>
+            <div id="apod-container">
+                <img id="apod-image" src="" alt="NASA APOD">
+                <p id="apod-caption"></p>
+                <p id="photographer"></p>
+            </div>
+        </div>
+
+        <div id="weather" class="dashboard-section">
+            <h2>Weather Information</h2>
+            <div id="weather-container">
+                <label for="cityInput">Enter City:</label>
+                <input type="text" id="cityInput">
+                <button class="btn btn-primary" onclick="getWeather()">Get Weather</button>
+                <div id="weatherData"></div>
+            </div>
+        </div>
+
+        <div id="articles" class="dashboard-section">
+            <h2>Top Headlines</h2>
+            <div class="article-container" id="articleContainer"></div>
+        </div>
+
+        <div id="quote" class="dashboard-section">
+            <h2>Random Quote</h2>
+            <div id="quote-container">
+                <div id="quote"></div>
+                <div id="author"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script src="script.js"></script>
+    <script>
+
+        fetchTime();
+        fetchNASAImage();
+        getWeather();
+        fetchTopHeadlines();
+        fetchRandomQuote();
+    </script>
+</body>
+</html>
