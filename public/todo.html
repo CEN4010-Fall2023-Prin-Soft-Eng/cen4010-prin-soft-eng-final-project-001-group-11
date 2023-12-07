@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Top of the Morning</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="time.html">Time</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nasa.html">NASA Picture of the Day</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="weather.html">Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="articles.html">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quote.html">Quote</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="todo.html">To-Do List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="todo-list">
+        <h1>To-Do List</h1>
+        <input type="text" id="task" placeholder="Add a new task">
+        <button id="add">Add</button>
+        <button id="refresh">Refresh</button>
+        <ul id="tasks">
+        </ul>
+    </div>
+
+    <script src="IntegratedStuff.js"></script>
+    <script>
+
+        let tasks = [];
+
+        function renderTasks() {
+            const taskList = document.getElementById("taskList");
+            taskList.innerHTML = '';
+
+            tasks.forEach((task, index) => {
+                const taskItem = document.createElement("div");
+                taskItem.innerHTML = `
+                    <input type="checkbox" ${task.completed ? "checked" : ""} onchange="toggleTask(${index})">
+                    <span>${task.text}</span>
+                    <button class="btn btn-danger btn-sm" onclick="deleteTask(${index})">Delete</button>
+                `;
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        function addTask() {
+            const newTaskInput = document.getElementById("newTask");
+            const taskText = newTaskInput.value.trim();
+
+            if (taskText !== "") {
+                tasks.push({ text: taskText, completed: false });
+                renderTasks();
+                newTaskInput.value = "";
+            }
+        }
+
+        function toggleTask(index) {
+            tasks[index].completed = !tasks[index].completed;
+            renderTasks();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            renderTasks();
+        }
+
+
+        renderTasks();
+    </script>
+</body>
+</html>
