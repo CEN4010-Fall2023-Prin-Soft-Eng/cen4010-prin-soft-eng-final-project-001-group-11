@@ -216,8 +216,8 @@ const listFileName = "list.json";
 let tasks = [];
 
 // Check if list.json exists, and load tasks from it if available
-if (fs.existsSync(`public/${listFileName}`)) {
-    const data = fs.readFileSync(`public/${listFileName}`, "utf-8");
+if (fs.existsSync(listFileName)) {
+    const data = fs.readFileSync(listFileName, "utf-8");
     tasks = JSON.parse(data);
 } else {
     // If list.json doesn't exist, create it and add initial tasks
@@ -225,7 +225,7 @@ if (fs.existsSync(`public/${listFileName}`)) {
         { text: "do the laundry", completed: false },
         { text: "do dishes", completed: true },
     ];
-    fs.writeFileSync(`public/${listFileName}`, JSON.stringify(tasks, null, 2));
+    fs.writeFileSync(listFileName, JSON.stringify(tasks, null, 2));
     console.log("list.json created with initial tasks");
 }
 
@@ -285,5 +285,5 @@ app.put("/api/tasks/:index/completed", (req, res) => {
 });
 
 function updateListFile() {
-    fs.writeFileSync(`public/${listFileName}`, JSON.stringify(tasks, null, 2));
+    fs.writeFileSync(listFileName, JSON.stringify(tasks, null, 2));
 }
