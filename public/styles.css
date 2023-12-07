@@ -1,3 +1,12 @@
+#apod-container {
+    max-width: 100%;
+}
+
+#apod-image {
+    max-width: 100%;
+    height: auto; /* This ensures the image maintains its aspect ratio */
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa; 
@@ -8,7 +17,9 @@ body {
     background-color: #e83e8c; 
 }
 
-.navbar-brand,
+.navbar-brand{
+    color: #e83e8c !important; 
+}
 .navbar-nav .nav-link {
     color: #495057 !important; 
 }
@@ -22,20 +33,25 @@ body {
 }
 
 .container {
+    display: flex;
+    justify-content: space-between;
     background-color: #fff; 
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
 }
 
 .column {
-    flex: 1; /* Each column takes equal width */
-    padding: 10px; /* Some padding inside columns */
+    width: 48%; /* Adjust the width as needed */
+    margin-bottom: 20px;
 }
 
 .dashboard-section {
-    margin-top: 30px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.dashboard-section {
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 8px;
@@ -96,9 +112,7 @@ input[type="text"] {
 #quote-container {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
 }
 
 

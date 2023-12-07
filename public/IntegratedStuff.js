@@ -158,7 +158,7 @@ function fetchTopHeadlines() {
 
                 linkElement.appendChild(imgElement);
 
-                const titleElement = document.createElement('h3');
+                const titleElement = document.createElement('h4');
                 titleElement.textContent = article.title;
                 linkElement.appendChild(titleElement);
 
