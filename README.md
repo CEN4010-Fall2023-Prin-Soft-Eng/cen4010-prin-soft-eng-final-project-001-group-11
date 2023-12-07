@@ -2,7 +2,7 @@
 cen4010-prin-soft-eng-final-project-geese created by GitHub Classroom
 
 # Top of the Morning
-Welcome to Top of the Morning, an integrated dashboard project! This dashboard is designed to provide users with a seamless and convenient experience by integrating various applications onto a single homepage. Whether you're interested in staying updated with the latest news, checking the local weather, managing your to-do list, or simply enjoying a daily quote and image from NASA, this dashboard has you covered.
+Welcome to Top of the Morning, an Top of the Morning project! This dashboard is designed to provide users with a seamless and convenient experience by integrating various applications onto a single homepage. Whether you're interested in staying updated with the latest news, checking the local weather, managing your to-do list, or simply enjoying a daily quote and image from NASA, this dashboard has you covered.
 
 ## Features
 ### 1. News Section
