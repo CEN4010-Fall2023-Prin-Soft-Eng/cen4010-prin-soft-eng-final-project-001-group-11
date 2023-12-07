@@ -52,6 +52,13 @@
         <div class="column">
             <div id="time" class="dashboard-section">
                 <h1 id="time-display"></h1>
+                <style>
+                    h1 {
+                    text-align: center;
+                      margin: 0;
+                    }
+                  </style>
+              
             </div>
 
             <div id="todo-list" class="dashboard-section">
@@ -60,6 +67,12 @@
                 <button id="add">Add</button>
                 <button id="refresh">Refresh</button>
                 <ul id="tasks"></ul>
+                <style>
+                    h2 {
+                    text-align: left;
+                      margin: 0;
+                    }
+                  </style>
             </div>
     
             <div id="weather" class="dashboard-section">
@@ -69,7 +82,14 @@
                     <input type="text" id="cityInput">
                     <button class="btn btn-primary" onclick="getWeather()">Get Weather</button>
                     <div id="weatherData"></div>
+                    <style>
+                        h2 {
+                        text-align: center;
+                          margin: 0;
+                        }
+                      </style>
                 </div>
+               
             </div>
         </div>
     

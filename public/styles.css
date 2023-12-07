@@ -1,5 +1,6 @@
 #apod-container {
     max-width: 100%;
+    align-items: center;
 }
 
 #apod-image {
@@ -49,6 +50,7 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .dashboard-section {
