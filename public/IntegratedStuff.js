@@ -210,3 +210,4 @@ setInterval(() => {
     fetchTopHeadlines();
     fetchRandomQuote();
 }, 2000000);
+
