@@ -3,8 +3,10 @@ cen4010-prin-soft-eng-final-project-001-group-11 created by GitHub Classroom
 
 Deployment Link: https://cen4010-fall2023-prin-soft-eng.github.io/cen4010-prin-soft-eng-final-project-001-group-11/public/index2.html
 
+We deployed our website using Github Pages. It was a very simple process, first we went to the settings tab on our repository. Then under "Code and Automation" you will see the Pages tab, from there select deploy from branch.
+
 # Top of the Morning
-Welcome to Top of the Morning, an Top of the Morning project! This dashboard is designed to provide users with a seamless and convenient experience by integrating various applications onto a single homepage. Whether you're interested in staying updated with the latest news, checking the local weather, managing your to-do list, or simply enjoying a daily quote and image from NASA, this dashboard has you covered.
+Welcome to Top of the Morning! This dashboard is designed to provide users with a seamless and convenient experience by integrating various applications onto a single homepage. Whether you're interested in staying updated with the latest news, checking the local weather, managing your to-do list, or simply enjoying a daily quote and image from NASA, this dashboard has you covered.
 
 ## Features
 ### 1. News Section
@@ -26,7 +28,7 @@ Start your day on a positive note with a daily inspirational quote. The dashboar
 Experience the wonders of space with a daily image sourced from NASA. Each day brings a new and captivating image, turning your dashboard into a window to the cosmos.
 
 ## Technologies Used
-HTML, CSS, JavaScript
+HTML, CSS, JavaScript, Github Pages, Google Firebase
 
 ## Credits
 News API for real-time news updates  
